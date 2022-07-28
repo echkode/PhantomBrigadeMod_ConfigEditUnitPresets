@@ -1,4 +1,7 @@
-﻿using System.Linq;
+﻿// Copyright (c) 2022 EchKode
+// SPDX-License-Identifier: BSD-3-Clause
+
+using System.Linq;
 
 using HarmonyLib;
 using PhantomBrigade.Data;
