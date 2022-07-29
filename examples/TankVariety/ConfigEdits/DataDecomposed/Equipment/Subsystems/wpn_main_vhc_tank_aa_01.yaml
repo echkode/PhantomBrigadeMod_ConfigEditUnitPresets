@@ -1,0 +1,11 @@
+removed: false
+edits:
+- 'stats.act_duration.value: 1.15'
+- 'stats.act_heat.value: 120'
+- 'stats.wpn_damage.value: 13'
+- 'stats.wpn_concussion.value: 2'
+- 'stats.wpn_range_min.value: 3'
+- 'stats.wpn_range_max.value: 90'
+- 'stats.wpn_scatter_angle.value: 4'
+- 'stats.wpn_scatter_angle_moving.value: 7'
+- 'stats.wpn_speed.value: 500'

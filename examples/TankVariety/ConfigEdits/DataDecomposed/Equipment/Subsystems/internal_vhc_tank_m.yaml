@@ -1,0 +1,5 @@
+removed: false
+edits:
+- 'parent: vhc_tank_base'
+- 'stats.mass.value: 1.4'
+- 'stats.hp.value: 1.1'

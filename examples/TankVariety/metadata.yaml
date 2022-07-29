@@ -1,0 +1,12 @@
+id: TankVariety
+ver: 1
+includesConfigOverrides: true
+includesConfigEdits: true
+includesLibraries: true
+includesTextures: false
+includesLocalizationEdits: false
+includesLocalizations: false
+gameVersionMin:
+gameVersionMax:
+name: Tank Variety
+desc: Adds excitement and variety to the cannon tank

@@ -1,0 +1,7 @@
+removed: false
+edits:
+- 'partTagPreferences.body.0.tags.mnf_vhc_03: !-'
+- 'partTagPreferences.body.0.tags.tank_turret_aa: false !+'
+- 'partTagPreferences.body.0.tags.tank_turret_cannon: false !+'
+- 'partTagPreferences.body.0.tags.tank_light: true !+'
+- 'partTagPreferences.body.0.tags.tank_elevated: false !+'

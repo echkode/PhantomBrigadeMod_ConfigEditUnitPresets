@@ -1,0 +1,57 @@
+hidden: true
+parent: vhc_tank_base
+rating: 1
+textNameFromPreset: 
+textNameFromHardpoint: 
+textName: 
+textDescFromPreset: 
+textDesc: 
+hardpoints: []
+tags: []
+statDistribution: ''
+stats:
+  barrier:
+    value: 0
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  heat_dissipation:
+    value: 1.2
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  overheat_limit:
+    value: 1.2
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  overheat_threshold:
+    value: 1.5
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  power:
+    value: 1.1
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  hp:
+    value: 1.6
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  mass:
+    value: 1.5
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  scrap_value:
+    value: 1.4
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+visuals: 
+activation: 
+projectile: 
+beam: 
+custom: 

@@ -1,0 +1,29 @@
+hidden: false
+parents:
+- key: vhc_primary_exclusive
+rating: 1
+livery: ''
+comment: 
+textName: 
+textDesc: 
+sockets:
+- equipment_right
+systems:
+  internal_main_equipment:
+    livery: 
+    flags: 
+    resolver: !SubsystemResolverKeys
+      keys:
+      - wpn_main_vhc_tank_cannon_01_weakened
+tags:
+- branch_army
+- branch_experimental
+- branch_reserves
+- branch_specops
+- branch_trainingarmy
+- branch_trainingreserves
+- difficulty_easy
+- range_long
+- rating_0
+- tank_part
+- tank_light

@@ -1,0 +1,6 @@
+removed: false
+edits:
+- 'parent: internal_vhc_tank_l'
+- 'stats.heat_dissipation.value: 0.25'
+- 'stats.hp.value: 0.3'
+- 'stats.mass.value: 0.3'

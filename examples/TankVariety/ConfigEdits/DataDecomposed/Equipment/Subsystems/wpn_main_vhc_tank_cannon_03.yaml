@@ -1,0 +1,14 @@
+removed: false
+edits:
+- 'parent: wpn_main_vhc_tank_cannon'
+- 'stats.act_count.value: 3'
+- 'stats.act_duration.value: 1.5'
+- 'stats.act_heat.value: 120'
+- 'stats.mass.value: 8'
+- 'stats.wpn_damage.value: 130'
+- 'stats.wpn_concussion.value: 30'
+- 'stats.wpn_range_min.value: 5'
+- 'stats.wpn_range_max.value: 140'
+- 'stats.wpn_scatter_angle.value: 3'
+- 'stats.wpn_scatter_angle_moving.value: 6'
+- 'stats.wpn_speed.value: 350'

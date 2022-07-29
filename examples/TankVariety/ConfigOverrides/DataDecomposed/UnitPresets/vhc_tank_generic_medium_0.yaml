@@ -1,0 +1,33 @@
+hidden: false
+listed: true
+textName: 
+parents: []
+blueprint: unit_tank_modular
+livery: default
+aiBehavior: Flanker
+aiTargeting: vanguard
+tags:
+- branch_army
+- branch_experimental
+- branch_reserves
+- branch_specops
+- role_juggernaut
+- role_leader
+- role_support
+- role_vanguard
+- type_tank_standard
+subsystemTagPreferences: 
+partTagPreferences:
+  body:
+  - tags:
+      tank_light: true
+      tank_turret_adapter: false
+      tank_elevated: false
+  equipment_right:
+  - tags:
+      range_medium: true
+      tank_part: true
+      tank_light: true
+      tank_medium: false
+      tank_heavy: false
+parts: 

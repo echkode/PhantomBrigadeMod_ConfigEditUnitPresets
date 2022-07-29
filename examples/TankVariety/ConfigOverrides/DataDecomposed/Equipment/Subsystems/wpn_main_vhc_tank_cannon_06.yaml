@@ -1,0 +1,182 @@
+hidden: false
+parent: wpn_main_vhc_tank_cannon
+rating: 1
+textNameFromPreset: 
+textNameFromHardpoint: 
+textName: 
+textDescFromPreset: 
+textDesc: 
+hardpoints:
+- internal_main_equipment
+tags:
+- category_wpn_tank_cannon
+statDistribution: ''
+stats:
+  act_count:
+    value: 1
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  act_duration:
+    value: 1
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  act_heat:
+    value: 80
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  mass:
+    value: 9
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  scrap_value:
+    value: 1
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  wpn_concussion:
+    value: 4.4
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  wpn_damage:
+    value: 33
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  wpn_damage_radius:
+    value: 1
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  wpn_impact:
+    value: 4
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  wpn_impact_radius:
+    value: 2
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  wpn_range_max:
+    value: 160
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  wpn_range_min:
+    value: 10
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  wpn_scatter_angle:
+    value: 2
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  wpn_scatter_angle_moving:
+    value: 10
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+  wpn_speed:
+    value: 400
+    targetMode: 0
+    targetSocket: ''
+    targetHardpoint: ''
+visuals: 
+activation:
+  visual:
+    local:
+      factionUsed: false
+      key: fx_muzzle_tank_cannon
+      keyEnemy: 
+      scale: &o0
+        x: 1
+        y: 1
+        z: 1
+    root: 
+    localSocketOverride: secondary
+    localHardpointOverride: vhc_vis_secondary
+  audio:
+    onActivationFirst: weapon_tank_cannon
+    onActivationMid: weapon_tank_cannon
+    onActivationLast: weapon_tank_cannon
+    onActivationStart: 
+    onActivationEnd: 
+  light:
+    shared: true
+    key: wpn_vhc_cannon
+    custom: 
+  recoil:
+    key: 
+projectile: 
+  debugIndexRange: &o1 {}
+  visual:
+    body:
+      factionUsed: true
+      key: fx_projectile_flak_blue
+      keyEnemy: fx_projectile_flak_orange
+      scale: *o0
+    impact: 
+    deactivation: 
+  audio:
+    onImpact: impact_bullet_mech_small
+    onDeactivation: 
+  damageDelay: 
+  distribution: 
+  range: 
+  fragmentation:
+    count: 12
+    delay: 0
+    angle: 0
+    angleFromStat: true
+    dependency: 
+  falloff:
+    animated: true
+    damageFalloff:
+      modePostWrap: ClampForever
+      modePreWrap: ClampForever
+      keys:
+      - tv_tg:
+          x: 0
+          y: 0.35
+          z: 0.009852102
+          w: 0.009852102
+        w:
+          x: 0.3333333
+          y: 0.5794392
+        m: *o1
+      - tv_tg:
+          x: 0.5003662
+          y: 1
+          z: 0
+          w: 0
+        w:
+          x: 1
+          y: 1
+        m: *o1
+      - tv_tg:
+          x: 1
+          y: 1
+          z: 0.002351897
+          w: 0.002351897
+        w:
+          x: 1
+          y: 0.3333333
+        m: *o1
+  animationFade: 
+  ballistics: 
+  fuseProximity: 
+  splashDamage: 
+  splashImpact:
+    exponent: 2
+    triggerOnDamage: false
+  guidanceData: 
+  guidanceAudio: 
+  uiTrajectory: 
+beam: 
+custom: 

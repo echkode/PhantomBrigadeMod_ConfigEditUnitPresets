@@ -1,0 +1,14 @@
+removed: false
+edits:
+- 'partTagPreferences.body.0.tags.mnf_vhc_01: !-'
+- 'partTagPreferences.body.0.tags.tank_turret_aa: false !+'
+- 'partTagPreferences.body.0.tags.tank_turret_adapter: false !+'
+- 'partTagPreferences.body.0.tags.tank_heavy: true !+'
+- 'partTagPreferences.body.0.tags.tank_elevated: false !+'
+- 'partTagPreferences.equipment_right.0.tags.mnf_vhc_01: !-'
+- 'partTagPreferences.equipment_right.0.tags.mnf_wpn_01: !-'
+- 'partTagPreferences.equipment_right.0.tags.mnf_wpn_02: !-'
+- 'partTagPreferences.equipment_right.0.tags.mnf_wpn_03: !-'
+- 'partTagPreferences.equipment_right.0.tags.part_railgun: false !+'
+- 'partTagPreferences.equipment_right.0.tags.tank_part: true !+'
+- 'partTagPreferences.equipment_right.0.tags.tank_heavy: true !+'

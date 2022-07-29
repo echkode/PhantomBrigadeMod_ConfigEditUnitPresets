@@ -1,0 +1,32 @@
+hidden: false
+parents:
+- key: vhc_tank_body_chassis
+rating: 1
+livery: ''
+comment: 
+textName: 
+textDesc: 
+sockets: []
+systems:
+  internal_vhc_chassis:
+    livery: 
+    flags: 
+    resolver: !SubsystemResolverKeys
+      keys:
+      - internal_vhc_tank_core_v01_set02
+  internal_vhc_core:
+    livery: 
+    flags: 
+    resolver: !SubsystemResolverKeys
+      keys:
+      - internal_aux_core_vhc
+tags:
+- branch_army
+- branch_experimental
+- branch_reserves
+- branch_specops
+- rating_1
+- rating_2
+- rating_3
+- tank_part
+- tank_medium
