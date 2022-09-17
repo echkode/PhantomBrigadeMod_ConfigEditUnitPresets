@@ -75,6 +75,7 @@ namespace EchKode.PBMods.ConfigEditUnitPresets
 		private static Dictionary<string, EditOperation> operationMap;
 		private static HashSet<EditOperation> allowedHashSetOperations;
 		private static Dictionary<Type, Action<EditSpec, Action<object>>> updaterMap;
+		private static Dictionary<string, Type> tagTypeMap;
 
 		internal static void Initialize()
 		{
@@ -112,6 +113,11 @@ namespace EchKode.PBMods.ConfigEditUnitPresets
 				[typeVector3] = UpdateVector3Field,
 				[typeVector4] = UpdateVector4Field,
 				[typeHashSet] = UpdateHashSet,
+			};
+
+			tagTypeMap = new Dictionary<string, Type>()
+			{
+				["PartResolverClear"] = typeof(DataBlockPartSlotResolverClear),
 			};
 		}
 
@@ -350,12 +356,25 @@ namespace EchKode.PBMods.ConfigEditUnitPresets
 				return;
 			}
 
-			object instance = Activator.CreateInstance(spec.state.targetType);
+			var instanceType = spec.state.targetType;
+			if (valueRaw.StartsWith("!"))
+			{
+				if (!tagTypeMap.TryGetValue(valueRaw.Substring(1), out instanceType))
+				{
+					Report(
+						spec,
+						"attempts to edit",
+						$"There is no type associated with tag {valueRaw}");
+					return;
+				}
+			}
+
+			var instance = Activator.CreateInstance(instanceType);
 			spec.state.fieldInfo.SetValue(spec.state.parent, instance);
 			Report(
 				spec,
 				"edits",
-				$"Assigning new default object of type {spec.state.targetType.Name} to target field");
+				$"Assigning new default object of type {instanceType.Name} to target field");
 		}
 
 		private static (EditOperation, string) ParseOperation(string valueRaw)
@@ -483,7 +502,7 @@ namespace EchKode.PBMods.ConfigEditUnitPresets
 						$"Inserting new entry of type {elementType.Name} to index {index} of the list (step {spec.state.pathSegmentIndex})");
 				}
 
-				return true;
+				return !string.IsNullOrWhiteSpace(spec.valueRaw);
 			}
 
 			if (spec.state.op == EditOperation.Remove)
@@ -585,7 +604,8 @@ namespace EchKode.PBMods.ConfigEditUnitPresets
 						"attempts to edit",
 						$"Key {key} already exists, ignoring the command to add it");
 				}
-				return true;
+
+				return !string.IsNullOrWhiteSpace(spec.valueRaw);
 			}
 
 			if (spec.state.op == EditOperation.Remove)
@@ -731,7 +751,7 @@ namespace EchKode.PBMods.ConfigEditUnitPresets
 			var v = 0.0f;
 			if (spec.state.op != EditOperation.DefaultValue)
 			{
-				if (!float.TryParse(spec.valueRaw, NumberStyles.Integer, CultureInfo.InvariantCulture, out v))
+				if (!float.TryParse(spec.valueRaw, NumberStyles.Float, CultureInfo.InvariantCulture, out v))
 				{
 					Report(
 						spec,

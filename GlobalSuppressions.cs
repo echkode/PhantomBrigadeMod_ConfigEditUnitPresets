@@ -5,4 +5,4 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "Used by the Harmony patch system", Scope = "member", Target = "~M:EchKode.PBMods.ConfigEditUnitPresets.Patch.Gc_ProcessRequestsPrefix")]
+[assembly: SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "Used by the Harmony patch system", Scope = "member", Target = "~M:EchKode.PBMods.ConfigEditUnitPresets.Patch.Dis_InitializePostfix")]
