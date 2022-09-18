@@ -22,6 +22,7 @@ namespace EchKode.PBMods.ConfigEditUnitPresets
 			Insert,
 			Remove,
 			DefaultValue,
+			NullValue,
 		}
 
 		private class EditSpec
@@ -58,6 +59,7 @@ namespace EchKode.PBMods.ConfigEditUnitPresets
 				public const string Insert = "!+";
 				public const string Remove = "!-";
 				public const string DefaultValue = "!d";
+				public const string NullValue = "!n";
 			}
 		}
 
@@ -95,6 +97,7 @@ namespace EchKode.PBMods.ConfigEditUnitPresets
 				[Constants.Operator.Insert] = EditOperation.Insert,
 				[Constants.Operator.Remove] = EditOperation.Remove,
 				[Constants.Operator.DefaultValue] = EditOperation.DefaultValue,
+				[Constants.Operator.NullValue] = EditOperation.NullValue,
 			};
 
 			allowedHashSetOperations = new HashSet<EditOperation>()
@@ -327,6 +330,25 @@ namespace EchKode.PBMods.ConfigEditUnitPresets
 			var (ok, update) = ValidateEditState(spec);
 			if (!ok)
 			{
+				return;
+			}
+
+			if (spec.state.op == EditOperation.NullValue)
+			{
+				if (spec.state.targetType.IsValueType)
+				{
+					Report(
+						spec,
+						"attempts to edit",
+						$"Value type {spec.state.targetType.Name} cannot be set to null");
+					return;
+				}
+
+				spec.state.fieldInfo.SetValue(spec.state.parent, null);
+				Report(
+					spec,
+					"edits",
+					$"Assigning null to target field");
 				return;
 			}
 
