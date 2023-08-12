@@ -1,5 +1,7 @@
 **ConfigEditUnitPresets**
 ----
+**This mod is obsolete.** The game has been patched by the publisher so this is no longer a problem.
+
 A library mod for [Phantom Brigade (Alpha)](https://braceyourselfgames.com/phantom-brigade/) which enables using the ConfigEdit/ConfigOverride mechanism to modify or add UnitPresets configurations.
 
 It is compatible with game version **0.20.0**. All library mods are fragile and susceptible to breakage whenever a new version is released.
